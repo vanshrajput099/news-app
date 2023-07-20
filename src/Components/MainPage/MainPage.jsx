@@ -16,10 +16,13 @@ const MainPage = ({category , search , topHead , setDataAPI , dataAPI}) => {
 
   useEffect(()=>{
 
+    console.log("USE")
+
     async function fetchDataSearch(){
       try{
         let response = await axios.get(URLSearch + search + "&language=en&pageSize=100" + "&apikey=" + API)
         setDataAPI(response.data.articles)
+        console.log(response.data.articles)
       }
 
       catch(err){
@@ -31,6 +34,7 @@ const MainPage = ({category , search , topHead , setDataAPI , dataAPI}) => {
       try{
         let response = await axios.get(URL + "category=" + category + "&lang=en&country=in" + "&pageSize=50" + "&apikey=" + API)
         setDataAPI(response.data.articles)
+        console.log(response.data.articles)
       }
 
       catch(err){
