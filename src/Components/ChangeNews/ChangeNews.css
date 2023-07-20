@@ -1,0 +1,86 @@
+.change-news{
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: space-around;
+}
+
+.mid-change{
+    margin: 20px 0;
+    gap: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.mid-change-buttons{
+    background-color: white;
+    padding: 1rem;
+    width: max-content;
+    font-size: 1rem;
+    border: 1px solid #3180e044;
+    border-radius: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transition: all 0.3s ease;
+}
+
+.mid-change-buttons:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.selected{
+    background-color: #3180e0c3;
+    color: white;
+    border: 1px solid #3180e0c3;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@media screen and (width<=1024px) {
+    .mid-change-buttons{
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (width<=768px) {
+    .mid-change-buttons{
+        padding: 0.5rem;
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (width<=425px) {
+    .mid-change-buttons{
+        padding: 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    .mid-change{
+        justify-content: center;
+    }
+}
+
+@media screen and (width<=375px) {
+    .mid-change-buttons{
+        padding: 0.5rem;
+        font-size: 0.75rem;
+    }
+
+    .mid-change{
+        justify-content: center;
+    }
+}
+
+@media screen and (width<=320px) {
+    .mid-change-buttons{
+        padding: 0.5rem;
+        font-size: 0.75rem;
+    }
+
+    .mid-change{
+        justify-content: center;
+    }
+}
