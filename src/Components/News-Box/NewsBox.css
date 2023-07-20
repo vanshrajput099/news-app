@@ -93,7 +93,8 @@
 
 @media screen and (width<=375px) {
     .news-outer{
-        width: 145px;
+        margin: 0 auto;
+        width: 210px;
     }
 
     .img-box{
