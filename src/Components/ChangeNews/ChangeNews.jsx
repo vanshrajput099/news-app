@@ -5,6 +5,8 @@ import category from '../../Category'
 const ChangeNews = ({setCategory , topHead , setDataAPI}) => {
 
     function buttonChange(e){
+        console.log(e)
+        console.log(e.target.value)
         setCategory(e.target.value)
         topHead(true)
         setDataAPI(null)
@@ -17,13 +19,13 @@ const ChangeNews = ({setCategory , topHead , setDataAPI}) => {
         <div className="mid-change">
             {
                 category.map((value,index)=>{
-                    if(value === "General"){
+                    if(value.name === "General"){
                         return(
-                            <button id={index} value={value} onClick={buttonChange} className='mid-change-buttons selected'>{value}</button>
+                            <button id={index} value={value.val} onClick={buttonChange} className='mid-change-buttons selected'>{value.name}</button>
                         ) 
                     }
                     return(
-                        <button id={index} value={value} onClick={buttonChange} className='mid-change-buttons'>{value}</button>
+                        <button id={index} value={value.val} onClick={buttonChange} className='mid-change-buttons'>{value.name}</button>
                     )
                 })
             }
